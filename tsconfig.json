@@ -1,3 +1,38 @@
+
 {
-	"extends": "./node_modules/@appnest/web-config/tsconfig.json"
+  "compilerOptions": {
+    "lib": [
+      "ESNext",
+      "dom"
+    ], 
+    "outDir": "lib", 
+    "removeComments": true,
+    "target": "ES6",
+
+    // module resolution
+    "baseUrl": "./", 
+    "esModuleInterop": true, 
+    "moduleResolution": "node", 
+    "paths": {}, 
+
+    // source map
+    "sourceMap": true,
+    "sourceRoot": "/", 
+
+    // strict checks
+    "alwaysStrict": true, 
+    "allowUnreachableCode": false,
+    "noImplicitAny": true, 
+    "strictNullChecks": true, 
+
+    // linter checks
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true, 
+    "noUnusedLocals": true, 
+    "noUnusedParameters": true 
+  },
+  "include": ["./lib/**/*.ts"],
+  "exclude": [
+    "node_modules/**/*"
+  ]
 }
